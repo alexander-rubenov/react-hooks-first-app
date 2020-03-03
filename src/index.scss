@@ -61,3 +61,13 @@ code {
     transform: translateX(-200px);
   }
 }
+
+.products-list {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.form-edit-submit {
+  max-width: 100px;
+}

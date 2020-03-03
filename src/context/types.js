@@ -1,6 +1,8 @@
-export const SHOW_ALERT = 'SHOW_ALERT';
-export const HIDE_ALERT = 'HIDE_ALERT';
-export const SHOW_LOADER = 'SHOW_LOADER';
-export const ADD_NOTE = 'ADD_NOTE';
-export const FETCH_NOTES = 'FETCH_NOTES';
-export const REMOVE_NOTE = 'REMOVE_NOTE';
+export const SHOW_ALERT = 'SHOW_ALERT'
+export const HIDE_ALERT = 'HIDE_ALERT'
+export const SHOW_LOADER = 'SHOW_LOADER'
+export const ADD_PRODUCT = 'ADD_PRODUCT'
+export const EDIT_PRODUCT = 'EDIT_PRODUCT'
+export const UPDATE_QUANITY = 'UPDATE_QUANITY'
+export const FETCH_NOTES = 'FETCH_NOTES'
+export const REMOVE_PRODUCT = 'REMOVE_PRODUCT'

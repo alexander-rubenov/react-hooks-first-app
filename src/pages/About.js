@@ -4,11 +4,11 @@ export const About = () => (
     <div className="jumbotron">
         <div className="container">
             <h1 className="display-4">
-                Лучшее React-приложение
+                Scripts
             </h1>
             <p className="lead">
-                Создано с <strong>♥</strong> by Alexander
+                Создано <a href="https://rubenov.dev" target="_blank">rubenov.dev</a>
             </p>
         </div>
     </div>
-);
+)
