@@ -8,7 +8,7 @@ import {
   ADD_PRODUCT,
   EDIT_PRODUCT,
   UPDATE_QUANITY,
-  FETCH_NOTES,
+  FETCH_PRODUCTS,
   ASCENDING_SORT,
   DESCENDING_SORT,
   FILTER_BY_CATEGORY,
@@ -26,7 +26,7 @@ export const FirebaseState = ({ children }) => {
 
   const showLoader = () => dispatch({ type: SHOW_LOADER })
 
-  const fetchNotes = async () => {
+  const fetchProducts = async () => {
     showLoader()
     const res = await axios.get(`${url}/notes.json`)
 
@@ -37,7 +37,7 @@ export const FirebaseState = ({ children }) => {
       }
     })
 
-    dispatch({ type: FETCH_NOTES, payload })
+    dispatch({ type: FETCH_PRODUCTS, payload })
   }
 
   const addProduct = async ({
@@ -177,7 +177,7 @@ export const FirebaseState = ({ children }) => {
         filterByCategory,
         updateQuanity,
         removeProduct,
-        fetchNotes,
+        fetchProducts,
         loading: state.loading,
         notes: state.notes,
         filteredProducts: state.filteredProducts,

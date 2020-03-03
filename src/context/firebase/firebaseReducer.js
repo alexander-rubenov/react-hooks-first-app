@@ -3,7 +3,7 @@ import {
   ADD_PRODUCT,
   EDIT_PRODUCT,
   UPDATE_QUANITY,
-  FETCH_NOTES,
+  FETCH_PRODUCTS,
   REMOVE_PRODUCT,
   ASCENDING_SORT,
   DESCENDING_SORT,
@@ -37,7 +37,7 @@ const handlers = {
       return note
     }),
   }),
-  [FETCH_NOTES]: (state, { payload }) => ({
+  [FETCH_PRODUCTS]: (state, { payload }) => ({
     ...state,
     notes: payload,
     loading: false,
