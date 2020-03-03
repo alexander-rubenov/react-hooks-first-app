@@ -74,7 +74,7 @@ export const Form = () => {
                 <input
                     type="text"
                     className="form-control"
-                    placeholder="Вес"
+                    placeholder="Вес, кг"
                     value={weight}
                     onChange={event => setWeight(event.target.value)}
                     required

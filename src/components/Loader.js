@@ -6,4 +6,4 @@ export const Loader = () => (
             <span className="sr-only">Загрузка...</span>
         </div>
     </div>
-);
+)
