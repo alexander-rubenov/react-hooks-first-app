@@ -1,8 +1,8 @@
-import React, {useContext} from 'react'
-import {FirebaseContext} from '../context/firebase/firebaseContext'
+import React, { useContext } from 'react'
+import { FirebaseContext } from '../context/firebase/firebaseContext'
 
-export const Quantity = (props) => {
-  const {product} = props
+export const Quantity = props => {
+  const { product } = props
 
   const firebase = useContext(FirebaseContext)
 
@@ -13,13 +13,14 @@ export const Quantity = (props) => {
 
     count -= 1
 
-    firebase.updateQuanity({
-      ...product,
-      quantity: count
-    })
-    .catch(() => {
-      alert('что-то пошло не так...')
-    })
+    firebase
+      .updateQuanity({
+        ...product,
+        quantity: count,
+      })
+      .catch(() => {
+        alert('что-то пошло не так...')
+      })
   }
 
   const increaseHandler = () => {
@@ -27,28 +28,33 @@ export const Quantity = (props) => {
 
     count += 1
 
-    firebase.updateQuanity({
-      ...product,
-      quantity: count
-    })
-    .catch(() => {
-      alert('что-то пошло не так...')
-    })
+    firebase
+      .updateQuanity({
+        ...product,
+        quantity: count,
+      })
+      .catch(() => {
+        alert('что-то пошло не так...')
+      })
   }
 
   return (
     <div>
       <button
-          type="button"
-          className="btn btn-outline-info btn-sm"
-          onClick={() => decreaseHandler()}
-      >-</button>
-      { product.quantity }
+        type="button"
+        className="btn btn-outline-info btn-sm"
+        onClick={() => decreaseHandler()}
+      >
+        -
+      </button>
+      {product.quantity}
       <button
         type="button"
         className="btn btn-outline-info btn-sm"
         onClick={() => increaseHandler()}
-      >+</button>
+      >
+        +
+      </button>
     </div>
   )
 }

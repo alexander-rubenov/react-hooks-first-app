@@ -1,25 +1,38 @@
 import React, { Fragment, useContext, useEffect } from 'react'
-import { Form } from "../components/Form"
-import { ProductsList }  from "../components/ProductsList"
-import {FirebaseContext} from "../context/firebase/firebaseContext"
-import {Loader} from "../components/Loader"
+import { Form } from '../components/Form'
+import { ProductsList } from '../components/ProductsList'
+import { FirebaseContext } from '../context/firebase/firebaseContext'
+import { Loader } from '../components/Loader'
 
 export const Home = () => {
-    const {loading, notes, fetchNotes, removeProduct, filteredProducts} = useContext(FirebaseContext)
-    
-    useEffect(() => {
-        fetchNotes();
-        // eslint-disable-next-line
-    }, [])
+  const {
+    loading,
+    notes,
+    fetchNotes,
+    removeProduct,
+    filteredProducts,
+  } = useContext(FirebaseContext)
 
-    return (
-        <Fragment>
-            <Form />
+  useEffect(() => {
+    fetchNotes()
+    // eslint-disable-next-line
+  }, [])
 
-            <hr/>
+  return (
+    <Fragment>
+      <Form />
 
-            { loading ? <Loader/> : <ProductsList products={notes} filteredProducts={filteredProducts} onRemove={removeProduct} /> }
+      <hr />
 
-        </Fragment>
-    )
+      {loading ? (
+        <Loader />
+      ) : (
+        <ProductsList
+          products={notes}
+          filteredProducts={filteredProducts}
+          onRemove={removeProduct}
+        />
+      )}
+    </Fragment>
+  )
 }
